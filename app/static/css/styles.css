@@ -1,0 +1,43 @@
+.navbar {
+  height: 150px;
+  background-color: #1D160B;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar img {
+  width:150px;
+  height: 150px;
+  margin-left: 100px;
+}
+
+.navbar ul {
+  list-style: none;
+  margin-right: 130px;
+}
+
+.navbar ul li{
+  display: inline-block;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.home {
+  background-color: #BE3434;
+}
+
+.home:hover {
+  background-color: #E5E5E5;
+  color: black;
+}
+
+.others:hover{
+  background-color: #BE3434;
+}
