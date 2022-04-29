@@ -50,7 +50,6 @@ body {
   background-color: #BE3434;
 }
 
-/* font-family: 'Charm', cursive; */
 /* Intro Section */
 .intro{
   height: 830px;
@@ -93,6 +92,8 @@ body {
 .circleInfo p {
   margin-top: 20px;
   margin-left: -30px;
+  font-size: 23px;
+  font-family: 'Charm', cursive;
 }
 
 .whiteTxt {
@@ -106,3 +107,39 @@ body {
   border-radius: 100px;
 }
 
+/* News Sources Section */
+.container {
+  height: 1000px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-md-4 {
+  background-color: #1D160B;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 150px;
+  padding-right: 150px;
+  height: 1000px;
+}
+
+.col-md-4 h2 {
+  margin-top: 70px;
+  background-color: #BE3434;
+  padding: 15px;
+  border-radius: 20px 0px;
+  color: white;
+}
+
+.col-md-4 ul{
+  list-style: none;
+  text-align: center;
+  color: white;
+  margin-right: 50px;
+  line-height: 1.6;
+}
