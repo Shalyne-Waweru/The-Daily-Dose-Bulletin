@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
+
 body {
   margin: 0px;
   padding: 0px;
 }
 
+/* Navbar Section */
 .navbar {
   height: 150px;
   background-color: #1D160B;
@@ -14,7 +17,7 @@ body {
 .navbar img {
   width:150px;
   height: 150px;
-  margin-left: 100px;
+  margin-left: 130px;
 }
 
 .navbar ul {
@@ -46,3 +49,60 @@ body {
 .others:hover{
   background-color: #BE3434;
 }
+
+/* font-family: 'Charm', cursive; */
+/* Intro Section */
+.intro{
+  height: 830px;
+  background-color: #CBCFD2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.small-Img {
+  height: 250px;
+  width: 250px;
+  margin-top: -400px;
+  margin-right: 200px;
+}
+
+.info {
+  margin-left: 150px;
+}
+
+.info h2 {
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.info p {
+  font-size: 20px;
+  margin-top: -10px;
+}
+
+.redText {
+  color: #BE3434;
+}
+
+.circleInfo {
+  display: flex;
+  align-items: center;
+}
+
+.circleInfo p {
+  margin-top: 20px;
+  margin-left: -30px;
+}
+
+.whiteTxt {
+  color: white;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: #BE3434;
+  border-radius: 100px;
+}
+
