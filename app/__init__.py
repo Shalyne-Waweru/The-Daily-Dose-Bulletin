@@ -9,7 +9,7 @@ app = Flask(__name__,instance_relative_config = True)
 # Setting up configuration
 app.config.from_object(DevConfig)
 
-#Connects to the config.py file and all its contents are appended to the app.config.
+#Connects to the instance/config.py file and all its contents are appended to the app.config.
 app.config.from_pyfile('config.py')
 
 # Initializing Flask Extensions
