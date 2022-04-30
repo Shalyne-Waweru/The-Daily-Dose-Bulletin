@@ -46,8 +46,9 @@
       <div class="col-md-4">
         <h2>NEWS SOURCES</h2>
         <ul>
-          <li>ABC NEWS</li>
-          <li>ABC NEWS ABC NEWS</li>
+          {% for source in news_sources %}
+            <li><a href={{source.url}}>{{source.name}}</a></li>
+          {% endfor %}
         </ul>
       </div>
 
