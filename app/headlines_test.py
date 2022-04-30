@@ -1,5 +1,5 @@
 import unittest
-from models import headlines
+from .models import headlines
 
 #Get the Headlines Class 
 Headlines = headlines.Headlines

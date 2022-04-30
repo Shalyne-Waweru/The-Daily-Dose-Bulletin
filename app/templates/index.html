@@ -60,19 +60,22 @@
           <hr class="horizontal">
         </div>
 
-        <div class="headlines">
-          <img src="../static/images/logo.png" alt="Headline Image">
+        {% for headline in news_headlines %}
+          <div class="headlines"> 
+            <img src={{headline.image}} alt="Headline Image">
 
-          <div class="headlines-info">
-            <h2>TITLE</h2>
-            <p>Date Posted: <span class="date">APR 10 2022</span></p>
-            <p>Lorem ipsum dolor sit amet. 33 impedit dolorem aut enim molestiae <br>et sint nobis est sunt quis id ipsum 
-              fugit. Ut quibusdam quae! ...</p>
-            <div class="readMore">
-              <img src="https://img.icons8.com/material-sharp/24/ffffff/arrow.png"/>
-            </div> 
+            <div class="headlines-info">
+              <h2>{{headline.title}}</h2>
+              <p>{{headline.author}}</p>
+              <p>Date Posted: <span class="date">{{headline.publishedAt}}</span></p>
+              <p>{{headline.description}}</p>
+              <div class="readMore">
+                <img src="https://img.icons8.com/material-sharp/24/ffffff/arrow.png"/>
+                <!-- <a href={{headline.url}}>CLICK ME</a> -->
+              </div> 
+            </div>
           </div>
-        </div>
+        {% endfor %}
   
       </div>
     </div>

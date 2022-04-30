@@ -99,12 +99,12 @@ def get_headlines():
       headlines_results_list = get_headlines_response['articles']
 
       #If it does we call a process_results() function
-      headlines_results = process_results(headlines_results_list)
+      headlines_results = process_headline_results(headlines_results_list)
 
   return headlines_results
 
 #The function takes in the list of dictionary objects and returns a list of news headlines objects.
-def process_results(headlines_list):
+def process_headline_results(headlines_list):
   '''
   Function that processes the headlines result and transform them to a list of Objects
 
