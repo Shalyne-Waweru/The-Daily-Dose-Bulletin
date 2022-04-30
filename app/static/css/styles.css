@@ -108,10 +108,6 @@ body {
 }
 
 /* News Sources Section */
-.container {
-  height: 980px;
-}
-
 .row {
   display: flex;
   justify-content: space-between;
@@ -125,7 +121,7 @@ body {
   align-items: center;
   padding-left: 150px;
   padding-right: 150px;
-  height: 1000px;
+  height: 360vh;
 }
 
 .col-md-4 h2 {
@@ -138,10 +134,23 @@ body {
 
 .col-md-4 ul{
   list-style: none;
-  text-align: center;
-  color: white;
+  text-align: left;
   margin-right: 50px;
   line-height: 1.6;
+}
+
+.col-md-4 ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.col-md-4 ul li a:visited {
+  color: white;
+}
+
+.col-md-4 ul li a:hover{
+  color: #ffa28f;
+  text-decoration: underline;
 }
 
 /* News Headlines Section */
@@ -221,7 +230,7 @@ body {
   height: 300px;
   background-color: #CBCFD2;
   text-align: center;
-  margin-top: 0px;
+  margin-top: -20px;
 }
 
 .slider h1 {
