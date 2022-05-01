@@ -1,14 +1,14 @@
 #Contains the code to make requests to our API.
-from email.mime import image
 from app import app
 import urllib.request,json
 
-from app.headlines_test import Headlines
 from .models import news_sources
 from .models import headlines
+from .models import articles
 
 Sources = news_sources.Sources
 Headlines = headlines.Headlines
+Articles = articles.Articles
 
 # Getting api key
 api_key = app.config['NEWS_API_KEY']
@@ -19,7 +19,10 @@ news_sources_base_url = app.config['NEWS_SOURCES_BASE_URL']
 # Getting the news headlines base url
 news_headlines_base_url = app.config['NEWS_HEADLINES_BASE_URL']
 
-#Create a get_sources function
+# Getting the news categories base url
+news_categories_base_url = app.config['NEWS_CATEGORY_BASE_URL']
+
+#-------------------->Create a get_sources function
 def get_sources():
   '''
   Function that gets the json response to our url request
@@ -75,7 +78,7 @@ def process_results(sources_list):
 
   return sources_results
 
-#Create a get_headlines function
+#----------------------->Create a get_headlines function
 def get_headlines():
   '''
   Function that gets the json response to our url request
@@ -133,3 +136,61 @@ def process_headline_results(headlines_list):
       headlines_results.append(news_headline_object)
 
   return headlines_results
+
+#------------------------>Create a get_articles function
+def get_articles(category):
+  '''
+  Function that gets the json response to our url request
+  '''
+
+  #The format()method will replace the {} curly brace placeholders in the news_sources_base_url with the category and api_key.
+  get_news_articles_url = news_categories_base_url.format(category,api_key)
+
+  with urllib.request.urlopen(get_news_articles_url) as url:
+    #Use the read() function to read the response and store it in a get_articles_data variable.
+    get_articles_data = url.read()
+
+    #Convert the JSON response to a Python dictionary using json.loads function
+    get_articles_response = json.loads(get_articles_data)
+
+    articles_results = None
+
+    #Checking if the response contains any data
+    if get_articles_response['articles']:
+      articles_results_list = get_articles_response['articles']
+
+      #If it does we call a process_results() function
+      articles_results = process_articles_results(articles_results_list)
+
+  return articles_results
+
+#The function takes in the list of dictionary objects and returns a list of news articles objects.
+def process_articles_results(articles_list):
+  '''
+  Function that processes the articles result and transform them to a list of Objects
+
+  Args:
+      articles_list: A list of dictionaries that contain news articles details
+
+  Returns :
+      articles_results: A list of news articles objects
+  '''
+
+  #Create an empty list to store our newly created news articles objects.
+  articles_results = []
+
+  #Loop through the list of dictionaries using the get() method and pass in the keys so that we can access the values.
+  for article in articles_list:
+    image = article.get('urlToImage')
+    title = article.get('title')
+    author = article.get('author')
+    publishedAt = article.get('publishedAt')
+    description = article.get('description')
+    url = article.get('url')
+
+    if image:
+      #Creating the news article objects and append it to the empty list
+      news_article_object = Articles(image,title,author,publishedAt,description,url)
+      articles_results.append(news_article_object)
+
+  return articles_results
