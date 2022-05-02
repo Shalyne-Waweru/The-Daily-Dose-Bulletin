@@ -15,8 +15,8 @@ body {
 }
 
 .navbar img {
-  width:150px;
-  height: 150px;
+  width: 150px;
+  height: 130px;
   margin-left: 130px;
 }
 
@@ -73,11 +73,12 @@ body {
 .info h2 {
   font-size: 40px;
   line-height: 1.2;
+  font-weight: bold;
 }
 
 .info p {
   font-size: 20px;
-  margin-top: -10px;
+  margin-top: 10px;
 }
 
 .redText {
@@ -108,9 +109,9 @@ body {
 }
 
 /* News Sources Section */
-.row {
-  display: flex;
-  justify-content: space-between;
+#container {
+  margin: 0px;
+  max-width: 100% !important;
 }
 
 .col-md-5 {
@@ -119,10 +120,8 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 150px;
-  padding-right: 150px;
   height: 370vh;
-  width: 600px;
+  max-width: 30% !important;
 }
 
 .col-md-5 h2 {
@@ -132,6 +131,9 @@ body {
   border-radius: 20px 0px;
   color: white;
   text-align: center;
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .col-md-5 ul{
@@ -156,9 +158,7 @@ body {
 }
 
 /* News Headlines Section */
-.col-md-6 {
-  margin-left: auto;
-  margin-right: auto;
+.col-md-8 {
   height: 370vh;
   overflow: scroll;
 }
@@ -173,6 +173,7 @@ body {
 .headlines-section-header hr {
   width: 15px;
   margin: 15px;
+  margin-top: 30px;
   height: 3px;
   border: none;
   background: #1D160B;
@@ -184,6 +185,7 @@ body {
   font-size: 25px;
   letter-spacing: 1.0px;
   font-weight: bold;
+  margin-top: 30px;
 }
 
 .headlines {
@@ -191,8 +193,9 @@ body {
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-right: 50px;
+  padding-right: 50px;
+  padding-left: 30px;
 }
 
 .headlines img {
@@ -234,7 +237,6 @@ body {
   height: 300px;
   background-color: #CBCFD2;
   text-align: center;
-  margin-top: -20px;
 }
 
 .slider h1 {
@@ -245,6 +247,7 @@ body {
   margin-right: auto;
   width: 700px;
   height: 50px;
+  font-weight: bold;
 }
 
 /* Footer Section */
