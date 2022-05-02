@@ -1,3 +1,5 @@
+{% import 'macros.html' as macros %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="../static/css/styles.css" rel="stylesheet" type="text/css">
-  <title>Document</title>
+  <title>The Daily Dose Bulletin</title>
 </head>
 
 <body>
@@ -46,9 +48,7 @@
       <div class="col-md-5">
         <h2>NEWS SOURCES</h2>
         <ul>
-          {% for source in news_sources %}
-            <li><a href={{source.url}}>{{source.name}}</a></li>
-          {% endfor %}
+          {{macros.displaySourcesList(news_sources)}}
         </ul>
       </div>
 
