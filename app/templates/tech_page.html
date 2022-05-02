@@ -1,1 +1,31 @@
 {% extends 'base.html' %}
+
+{% block content %}
+  <div class="header">
+    <h2>TECH TRENDING NEWS</h2>
+    <hr class="left-horizontal">
+    <div class="red-circle"></div>
+    <hr class="right-horizontal">
+    <hr class="bottom-horizontal">
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <img src="../static/images/logo.png" alt="Article Image">
+
+        <div class="articles-info">
+          <h2>TITLE</h2>
+          <p>Author: <span class="date"></span></p>
+          <p>Date Posted: <span class="date"></span></p>
+          <p>Lorem ipsum dolor sit amet. 33 
+            impedit dolorem aut enim molestiae
+             et sint nobis est sunt quis id ipsum 
+            fugit. Ut quibusdam quae!</p>
+          <button><a href="#">VIEW MORE</a></button> 
+        </div>
+      </div>
+    </div>
+  </div>
+    
+{% endblock %}

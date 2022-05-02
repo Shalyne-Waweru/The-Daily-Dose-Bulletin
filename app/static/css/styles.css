@@ -285,3 +285,95 @@ body {
   text-align: center;
   font-size: 18px;
 }
+
+/* Tech Page Styles Section */
+
+/* Heading Section */
+.header {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.left-horizontal {
+  width: 170px;
+  margin-left: 710px;
+  margin-top: -10px;
+  background-color: #1D160B;
+  height: 2px;
+}
+
+.red-circle {
+  width: 30px;
+  height: 30px;
+  background-color: #BE3434;
+  border-radius: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -20px;
+}
+
+.right-horizontal {
+  width: 170px;
+  margin-right: 710px;
+  margin-top: -20px;
+  background-color: #1D160B;
+  height: 2px;
+}
+
+.bottom-horizontal {
+  width: 200px;
+  background-color: #1D160B;
+  height: 2px;
+  margin-top: 22px;
+}
+
+/* Articles Section */
+.container {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.row {
+  padding-left: 150px;
+  padding-right: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-md-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px;
+  width: 300px;
+  border: 1px solid #1D160B;
+  margin-bottom: 40px;
+}
+
+.col-md-3 img {
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.articles-info button {
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #BE3434;
+  border: none;
+  border-radius: 5px;
+}
+
+.articles-info button a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Charm', cursive;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.articles-info button a:visited {
+  color: white;
+}
