@@ -1,8 +1,5 @@
 import unittest
-from .models import articles
-
-#Get the Articles Class 
-Articles = articles.Articles
+from app.models import Articles
 
 class ArticlesTest(unittest.TestCase):
     '''
@@ -34,6 +31,3 @@ class ArticlesTest(unittest.TestCase):
       self.assertEqual(self.new_article.publishedAt,"2022-05-01T20:00:12Z")
       self.assertEqual(self.new_article.description,"Tesla CEO Elon Musk has laid out some bold, if still vague")
       self.assertEqual(self.new_article.url,"https://fortune.com/2022/05/01/elon-musks-big-plans-for-twitter-what-we-know-so-far/")
-
-if __name__ == '__main__':
-    unittest.main()

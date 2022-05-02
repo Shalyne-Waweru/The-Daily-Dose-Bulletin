@@ -1,26 +1,29 @@
 #Contains the code to make requests to our API.
-from app import app
 import urllib.request,json
 
-from .models import news_sources
-from .models import headlines
-from .models import articles
-
-Sources = news_sources.Sources
-Headlines = headlines.Headlines
-Articles = articles.Articles
+from .models import Sources
+from .models import Headlines
+from .models import Articles
 
 # Getting api key
-api_key = app.config['NEWS_API_KEY']
+api_key = None
 
 # Getting the news sources base url
-news_sources_base_url = app.config['NEWS_SOURCES_BASE_URL']
+news_sources_base_url = None
 
 # Getting the news headlines base url
-news_headlines_base_url = app.config['NEWS_HEADLINES_BASE_URL']
+news_headlines_base_url = None
 
 # Getting the news categories base url
-news_categories_base_url = app.config['NEWS_CATEGORY_BASE_URL']
+news_categories_base_url = None
+
+def configure_request(app):
+    global api_key,news_sources_base_url,news_headlines_base_url,news_categories_base_url
+
+    api_key = app.config['NEWS_API_KEY']
+    news_sources_base_url = app.config['NEWS_SOURCES_BASE_URL']
+    news_headlines_base_url = app.config['NEWS_HEADLINES_BASE_URL']
+    news_categories_base_url = app.config['NEWS_CATEGORY_BASE_URL']
 
 #-------------------->Create a get_sources function
 def get_sources():

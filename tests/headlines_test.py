@@ -1,8 +1,5 @@
 import unittest
-from .models import headlines
-
-#Get the Headlines Class 
-Headlines = headlines.Headlines
+from app.models import Headlines
 
 class HeadlinesTest(unittest.TestCase):
     '''
@@ -35,5 +32,5 @@ class HeadlinesTest(unittest.TestCase):
       self.assertEqual(self.new_headline.description,"The Jets are shrugging off universal praise for their draft class")
       self.assertEqual(self.new_headline.url,"https://www.espn.com/nfl/story/_/id/33833640/new-york-jets-brass-downplays-uncommon-praise-nfl-draft-class")
 
-if __name__ == '__main__':
-    unittest.main()
+# if __name__ == '__main__':
+#     unittest.main()
