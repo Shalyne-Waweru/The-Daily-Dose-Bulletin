@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class="header">
+    <h2>BUSINESS TRENDING NEWS</h2>
+    <hr class="left-horizontal">
+    <div class="red-circle"></div>
+    <hr class="right-horizontal">
+    <hr class="bottom-horizontal">
+  </div>
+
+  <div class="container">
+    <div class="row">
+      {% for article in news_articles%}
+      <div class="col-md-3">
+        <img src={{article.image}} alt="Article Image">
+
+        <div class="articles-info">
+          <h2>{{article.title}}</h2>
+          <p>Author: <span class="date">{{article.author}}</span></p>
+          <p>Date Posted: <span class="date">{{article.publishedAt}}</span></p>
+          <p>{{article.description}}</p>
+          <button><a href={{article.url}}>VIEW MORE</a></button>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+{% endblock %}

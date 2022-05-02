@@ -27,3 +27,25 @@ def tech_page():
 
   return render_template('tech_page.html', news_articles = news_articles)
 
+@app.route('/top-headlines?category=business')
+def business_page():
+  '''
+  View business_page function that returns the business page and its data
+  '''
+
+  #Get the News Articles
+  news_articles = get_articles('business')
+
+  return render_template('business_page.html', news_articles = news_articles)
+
+@app.route('/top-headlines?category=entertainment')
+def entertainment_page():
+  '''
+  View entertainment_page function that returns the entertainment page and its data
+  '''
+
+  #Get the News Articles
+  news_articles = get_articles('entertainment')
+
+  return render_template('ent_page.html', news_articles = news_articles)
+
