@@ -1,30 +1,7 @@
+{% extends 'base.html' %}
 {% import 'macros.html' as macros %}
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="../static/css/styles.css" rel="stylesheet" type="text/css">
-  <title>The Daily Dose Bulletin</title>
-</head>
-
-<body>
-  <!-- Navbar section -->
-  <header class="navbar">
-    <img src="../static/images/logo.png" alt="Logo" />
-
-    <ul>
-      <li><a class="home" href="{{ url_for('landing_page') }}">HOME</a></li>
-      <li><a class="others" href="#">TECH</a></li>
-      <li><a class="others" href="#">BUSINESS</a></li>
-      <li><a class="others" href="#">ENTERTAINMENT</a></li>
-    </ul>
-  </header>
-
+{% block content %}
   <!-- Introduction section -->
   <div class="intro">
     <div class="info">
@@ -97,6 +74,4 @@
     <hr>
     <p>Shalyne <span>&#169;</span> 2022. TheDailyDoseBulletin. All Rights Reserved.</p>
   </div>
-</body>
-
-</html>
+{% endblock %}
