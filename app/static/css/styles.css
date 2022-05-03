@@ -37,18 +37,19 @@ body {
   margin-left: 20px;
 }
 
-.home {
+.active, .btn:hover {
   background-color: #BE3434;
+  color: white;
 }
 
-.home:hover {
+.active:hover {
   background-color: #E5E5E5;
   color: black;
 }
 
-.others:hover{
+/* .others:hover{
   background-color: #BE3434;
-}
+} */
 
 /* Intro Section */
 .intro{

@@ -2,10 +2,10 @@
 <header class="navbar">
   <img src="../static/images/logo.png" alt="Logo" />
 
-  <ul>
-    <li><a class="home" href="{{ url_for('main.landing_page') }}">HOME</a></li>
-    <li><a class="others" href="{{ url_for('.tech_page') }}">TECH</a></li>
-    <li><a class="others" href="{{ url_for('main.business_page') }}">BUSINESS</a></li>
-    <li><a class="others" href="{{ url_for('.entertainment_page') }}">ENTERTAINMENT</a></li>
+  <ul id="navBtns">
+    <li><a class="btn active" href="{{ url_for('main.landing_page') }}">HOME</a></li>
+    <li><a class="btn" href="{{ url_for('.tech_page') }}">TECH</a></li>
+    <li><a class="btn" href="{{ url_for('main.business_page') }}">BUSINESS</a></li>
+    <li><a class="btn" href="{{ url_for('.entertainment_page') }}">ENTERTAINMENT</a></li>
   </ul>
 </header>
