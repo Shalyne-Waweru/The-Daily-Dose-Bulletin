@@ -17,6 +17,13 @@ This project is a website that uses the [News API](https://newsapi.org/) to disp
 - Javascript
 - Python
 
+## Project setup instructions
+To start using this project use the following commands:
+
+- `git clone https://github.com/Shalyne-Waweru/The-Daily-Dose-Bulletin.git`
+- `cd The-Daily-Dose-Bulletin`
+- run `./start.sh` to serve the application
+
 ## License info
 MIT License
 
